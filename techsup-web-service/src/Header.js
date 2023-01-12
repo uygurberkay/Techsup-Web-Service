@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
 import './Header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import {Link} from 'react-router-dom';
 
 function Header() {
     return (
       <div className='header'>
-  
-        {/*Header Logo */}
-        <img className='header__logo' src={require('./img/TECHSUP_icon_transparent.png')} />
-
+        <Link to='/' onClick={() => window.location.replace('/')}>
+            {/*Header Logo */}
+            <img className='header__logo' src={require('./img/TECHSUP_icon_transparent.png')} />
+        </Link>
         {/*Search Bar */}
         <div className='header__search'>
             <input className='header__searchInput'
@@ -49,12 +49,15 @@ function Header() {
                      Prime
                 </span>
               </div>
-                <div className='header__optionBasket'>
+              <Link to='/checkout'  onClick={() => window.location.replace('/checkout')}>
+                 <div className='header__optionBasket'>
                     <ShoppingBagIcon className=''/>
                     <span className='header__optionBasket header__basketCount'>
                         0
                     </span>
                 </div>
+              </Link>
+                
 
           </div>
       </div>
