@@ -4,6 +4,7 @@ export const initialState = {
 
 // Adds to basket from data layer
 const reducer = (state, action) => {
+    console.log(action)
     switch(action.type){
         case "ADD_TO_BASKET":
             return {
