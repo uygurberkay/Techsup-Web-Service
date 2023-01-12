@@ -6,7 +6,7 @@ function Checkout() {
   return (
     <div className='checkout'>
         <div className='checkout__left'>
-            <img className="checkout__ad" src={require('./img/Checkout_Image1.jpg')} alt='' />
+            <img className="checkout__ad" src={require('./img/Checkout_Image1.png')} alt='' />
         </div>
         <div>
             <h1 className='checkout__title'>
@@ -18,7 +18,7 @@ function Checkout() {
                 {/*Basket Item */}
             </h1>
         </div>
-        <div className='checkour_right'>
+        <div className='checkout__right'>
             <h2>
                 <Subtotal />
             </h2>
