@@ -10,6 +10,7 @@ function Subtotal() {
             renderText = {(value)=> (
                 <>
                     <p>
+                        {/* Will done after homework */}
                         Subtotal (0 items): <strong>0</strong>
                     </p>
                     <small className='subtotal__gift'>
@@ -18,12 +19,12 @@ function Subtotal() {
                 </>
             )}
             decimalScale= {2}
-            value = {0}
+            value = {0}  // homework 
             displayType = {'text'}
             thousandSeperator = {true}
             prefix={'₺'}
         />
-
+        <button> Proceed to Checkout</button>
     </div>
   )
 }
