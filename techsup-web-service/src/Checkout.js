@@ -10,7 +10,7 @@ function Checkout() {
         </div>
         <div>
             <h1 className='checkout__title'>
-                Your Shopping Basket
+                Ürün Sepetiniz
                 {/*Basket Item */}
                 {/*Basket Item */}
                 {/*Basket Item */}
