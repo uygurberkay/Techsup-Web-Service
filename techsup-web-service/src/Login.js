@@ -1,22 +1,31 @@
-import React, {useState} from 'react';
-import './Login.css';
-import {Link} from 'react-router-dom';
-
+import React, { useState } from 'react';
+import './Login.css'
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "./firebase";
 
 function Login() {
+    const history = useHistory();
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    const signIn = e => {
+    const signIn = (e) => {
         e.preventDefault(); // Block web-site reflesh
 
         // Firebase login algorithms
     }
-    const register = e  =>{
+    const register = (e)  =>{
         e.preventDefault();
-
         //Firebase login functions
+        auth.createUserWithEmailAndPassword(email,password).then((auth)=>{
+            // It succesfully create the user
+            console.log(auth)
+            if(auth){
+                history.push('/')
+            }
+        }).catch((e)=>{
+            alert(e.message)
+        });
     }
-
+    
     return (
         <div className='login'>
             <Link to='/' onClick={() => window.location.replace('/')}>
@@ -30,21 +39,22 @@ function Login() {
                     <h5>
                         E-mail
                     </h5>
-                    <input type='text' value={email} onChange={e => setEmail(e.value.target)}/>
+                    <input type='text' value={email} onChange={e => setEmail(e.target.value)}/>
                     <h5>
                         Şifre
                     </h5>
-                    <input type='password' value={password} onChange={e => setPassword(e.value.target)}/>
+                    <input type='password' value={password} onChange={e => setPassword(e.target.value)}/>
                     <button type='submit' className='login__signInButton' onClick={signIn}>Giriş Yap</button>
                 </form>
                 <p>
                     Giriş yaparak KKVA'nın maddelerini kabul etmiş sayılırsıınız. Reklamlara izin verirsiniz.
                 </p>
-                <button onClick={register}className='login__registerButton'>
-                    Techsup hesabını oluştur.
+                <button onClick={register} className='login__registerButton'>
+                    TechSup hesabını oluştur
                 </button>
             </div>
         </div>
+        
     )
 }
 
