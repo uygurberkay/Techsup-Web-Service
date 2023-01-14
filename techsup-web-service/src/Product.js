@@ -26,7 +26,7 @@ function Product ({id,title,image,price,rating}){
     <div className="product" >
         <div className="product__info" >
             <p> {title} </p>
-            <p className= "product__price"> Product Price : 
+            <p className= "product__price"> Ürün Fiyatı : 
                 <strong>{price}</strong>
                 <small>₺</small>
             </p>
@@ -40,7 +40,7 @@ function Product ({id,title,image,price,rating}){
         </div>
         
         <img src= {image} alt=""/>
-        <button className="button" onClick={addToBasket}> Add to Basket</button>
+        <button className="button" onClick={addToBasket}> Sepete Ekle</button>
     </div>
     )
 }

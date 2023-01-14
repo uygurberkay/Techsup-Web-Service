@@ -31,19 +31,19 @@ function Header() {
       <div className='header__nav'>
         <Link to='/login' onClick={() => window.location.replace('/login')}>
           <div className='header__option' >
-            <span className='header__optionLineOne'>Hello Guest </span>
-            <span className='header__optionLineTwo'>Sign In</span>
+            <span className='header__optionLineOne'>Misafir</span>
+            <span className='header__optionLineTwo'>Giriş Yap</span>
           </div>
         </Link>
 
         <div className='header__option' >
-          <span className='header__optionLineOne'>Returns</span>
-          <span className='header__optionLineTwo'>& Orders</span>
+          <span className='header__optionLineOne'>Ana menü</span>
+          <span className='header__optionLineTwo'>& Siparişler</span>
         </div>
               
         <div className='header__option' >
-          <span className='header__optionLineOne'>Your </span>
-          <span className='header__optionLineTwo'>Account</span>
+          <span className='header__optionLineOne'>Kişisel </span>
+          <span className='header__optionLineTwo'>Profil</span>
         </div>
 
         <Link to='/checkout' onClick={() => window.location.replace('/checkout')}>
