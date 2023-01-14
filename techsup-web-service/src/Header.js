@@ -13,7 +13,7 @@ function Header() {
   return (
 
     <div className='header'>
-      <Link to='/'>
+      <Link to='/' onClick={() => window.location.replace('/')}>
         {/*Header Logo */}
         <img className='header__logo' src={require('./img/TECHSUP_icon_transparent.png')} />
       </Link>
@@ -29,7 +29,7 @@ function Header() {
 
         {/* Sign-in / Sign-out catalogs on header */}
       <div className='header__nav'>
-        <Link to='/login' >
+        <Link to='/login' onClick={() => window.location.replace('/login')}>
           <div className='header__option' >
             <span className='header__optionLineOne'>Misafir</span>
             <span className='header__optionLineTwo'>Giriş Yap</span>
@@ -46,7 +46,7 @@ function Header() {
           <span className='header__optionLineTwo'>Profil</span>
         </div>
 
-        <Link to='/checkout' >
+        <Link to='/checkout' onClick={() => window.location.replace('/checkout')}>
           <div className='header__optionBasket'>
             <ShoppingBagIcon/>
             <span className='header__optionBasket header__basketCount'>
