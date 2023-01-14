@@ -6,6 +6,16 @@ import {Link} from 'react-router-dom';
 function Login() {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const signIn = e => {
+        e.preventDefault(); // Block web-site reflesh
+
+        // Firebase login algorithms
+    }
+    const register = e  =>{
+        e.preventDefault();
+
+        //Firebase login functions
+    }
 
     return (
         <div className='login'>
@@ -20,18 +30,18 @@ function Login() {
                     <h5>
                         E-mail
                     </h5>
-                    <input type='text' value={email}/>
+                    <input type='text' value={email} onChange={e => setEmail(e.value.target)}/>
                     <h5>
                         Şifre
                     </h5>
-                    <input type='password' value={password}/>
-                    <button className='login__signInButton' >Giriş Yap</button>
+                    <input type='password' value={password} onChange={e => setPassword(e.value.target)}/>
+                    <button type='submit' className='login__signInButton' onClick={signIn}>Giriş Yap</button>
                 </form>
                 <p>
                     Giriş yaparak KKVA'nın maddelerini kabul etmiş sayılırsıınız. Reklamlara izin verirsiniz.
                 </p>
-                <button className='login__registerButton'>
-                    echsup hesabını oluştur.
+                <button onClick={register}className='login__registerButton'>
+                    Techsup hesabını oluştur.
                 </button>
             </div>
         </div>
