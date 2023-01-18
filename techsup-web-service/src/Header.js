@@ -4,12 +4,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import {Link} from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 
 
 function Header() {
-  const [{basket}, /*dispatch*/] = useStateValue();
+  // eslint-disable-next-line no-unused-vars
+  const [{basket,user}, dispatch] = useStateValue();
 
-  
+  const handleAuthentication = (()=>{
+    if(user){
+      auth.signOut();
+    }
+  });
+
   return (
 
     <div className='header'>
@@ -29,10 +36,10 @@ function Header() {
 
         {/* Sign-in / Sign-out catalogs on header */}
       <div className='header__nav'>
-        <Link to='/login' onClick={() => window.location.replace('/login')}>
-          <div className='header__option' >
-            <span className='header__optionLineOne'>Misafir</span>
-            <span className='header__optionLineTwo'>Giriş Yap</span>
+        <Link to={!user &&'/login'} onClick={() => window.location.replace('/login')}>
+          <div onClick={handleAuthentication} className='header__option' >
+            <span className='header__optionLineOne'> Misafir</span>
+            <span className='header__optionLineTwo'>{user ? 'Çıkış Yap' : 'Giriş Yap'}</span>
           </div>
         </Link>
 

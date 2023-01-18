@@ -5,9 +5,9 @@ import { useStateValue } from "./StateProvider";
 
 function Product ({id,title,image,price,rating}){
 
+    // eslint-disable-next-line no-unused-vars
     const [{basket}, dispatch] = useStateValue();
 
-    console.log('this is basket >>>> ', basket)
 
     const addToBasket = () =>{
         // Dispatch the item into the data layer
