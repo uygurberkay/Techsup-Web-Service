@@ -6,13 +6,18 @@ import { auth } from "./firebase";
 
 
 function Login() {
+    // Change the url after log-in or sign-in
     const history = useHistory();
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const signIn = (e) => {
         e.preventDefault(); // Block web-site reflesh
-
         // Firebase login algorithms
+        auth.signInWithEmailAndPassword(email,password).then((auth)=>{
+            history.push('/')
+        }).catch((e)=>{
+            alert(e.message)
+        });
     }
     const register = (e)  =>{
         e.preventDefault();
@@ -27,6 +32,7 @@ function Login() {
             alert(e.message)
         });
     }
+    // DOESNT LINK MAİN MENU AFTER REGİSTER THERE WHERE I HOLD 4:01:00
     
     return (
         <div className='login'>
@@ -54,6 +60,8 @@ function Login() {
                 <button onClick={register} className='login__registerButton'>
                     TechSup hesabını oluştur
                 </button>
+                
+                
             </div>
         </div>
         
