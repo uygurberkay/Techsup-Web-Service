@@ -12,7 +12,7 @@ function Orders() {
     const [orders, setOrders] = useState([]); 
 
     useEffect(() =>{
-        if(user){
+        if(user){   
             db
             .collection('users')
             .doc(user.uid)
