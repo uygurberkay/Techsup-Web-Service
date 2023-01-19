@@ -12,7 +12,7 @@ function Checkout() {
             <div className='checkout__left'>
                 <img className="checkout__ad" src={require('./img/Checkout_Image1.png')} alt='' />
             </div>
-            <div>
+            <div className='chechout__box'>
                 <h3>Merhaba , {user}</h3>
                 <h1 className='checkout__title'>
                     {/*Basket Item */}

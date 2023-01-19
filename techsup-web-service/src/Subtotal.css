@@ -1,5 +1,5 @@
 .subtotal {
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
@@ -8,6 +8,7 @@
     background-color: #f3f3f3;
     border: 1px solid #dddddd;
     border-radius: 3px;
+    position: flex;
 }
 .subtotal__gift {
     display: flex;
