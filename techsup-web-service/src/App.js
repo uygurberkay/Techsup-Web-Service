@@ -5,6 +5,7 @@ import Home from './Home'
 import Login from './Login'
 import Checkout from './Checkout';
 import Payment from './Payment';
+import Account from './Account';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import { auth } from './firebase';
 
@@ -56,6 +57,13 @@ return (
               <Header />
               {/* Checkout */}
               <Checkout />
+            </Route>
+
+            <Route path="/account">
+              {/* Header render imported above */}
+              <Header />
+              {/* Account */}
+              <Account/>
             </Route>
 
             <Route path="/payment">

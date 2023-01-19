@@ -11,7 +11,7 @@ function Payment() {
         <div className='payment'>
             <div className='payment__container'>
                 <h1>
-                    Sepetiniz : {basket?.length} items
+                    Sepetiniz : {basket?.length} ürün
                 </h1>
                 {/*Payment Section - delivery address */}
                 <div className='payment__section'>
