@@ -4,6 +4,7 @@ import Header from './Header';
 import Home from './Home'
 import Login from './Login'
 import Checkout from './Checkout';
+import Payment from './Payment';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import { auth } from './firebase';
 
@@ -55,6 +56,13 @@ return (
               <Header />
               {/* Checkout */}
               <Checkout />
+            </Route>
+
+            <Route path="/payment">
+              {/* Header render imported above */}
+              <Header />
+              {/* Payment Page */}
+              <Payment />
             </Route>
 
             <Route exact path="/">

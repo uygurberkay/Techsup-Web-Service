@@ -1,6 +1,6 @@
 export const initialState = {
     basket : [],
-    user:  null //'denememail@gmail.com'
+    user:  'denememail@gmail.com' //null //
 };
 
 // Selector

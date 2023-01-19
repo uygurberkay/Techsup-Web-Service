@@ -2,21 +2,23 @@ import React from 'react'
 import './Subtotal.css'
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
+import {useHistory} from 'react-router-dom';
 // import { getBasketTotal } from './reducer';
 
 
 
 function Subtotal() {
-const [{basket}, /*dispatch*/] = useStateValue();
+const history = useHistory();
+// eslint-disable-next-line no-unused-vars
+const [{basket}, dispatch] = useStateValue();
 
-console.log(basket)
+
   return (
     <div className='subtotal'>
         <CurrencyFormat 
             renderText = {(value)=> (
                 <>
                     <p>
-                        {/* Will done after homework */}
                         Toplam fiyat ({basket.length} ürün): <strong>0 ₺</strong>
                     </p>
                     <small className='subtotal__gift'>
@@ -30,7 +32,7 @@ console.log(basket)
             thousandSeperator = {true}
             prefix={'₺'}
         />
-        <button> Satın al</button>
+        <button onClick={e => history.push('/payment')}> Satın al</button>
     </div>
   )
 }
