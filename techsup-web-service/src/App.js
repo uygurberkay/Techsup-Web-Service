@@ -6,6 +6,7 @@ import Login from './Login'
 import Checkout from './Checkout';
 import Payment from './Payment';
 import Account from './Account';
+import Orders from './Orders';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 //import { auth } from './firebase';
 
@@ -57,6 +58,13 @@ return (
               <Header />
               {/* Checkout */}
               <Checkout />
+            </Route>
+
+            <Route path="/orders">
+              {/* Header render imported above */}
+              <Header />
+              {/* Orders */}
+              <Orders/>
             </Route>
 
             <Route path="/account">

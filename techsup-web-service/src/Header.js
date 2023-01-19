@@ -43,10 +43,12 @@ function Header() {
           </div>
         </Link>
 
+        <Link to={'/orders'} onClick={() => window.location.replace('/orders')}>
         <div className='header__option' >
           <span className='header__optionLineOne'>Ana menü</span>
           <span className='header__optionLineTwo'>& Siparişler</span>
         </div>
+        </Link>
         
         <Link to={'/account'} onClick={() => window.location.replace('/account')}>
         <div className='header__option' >
