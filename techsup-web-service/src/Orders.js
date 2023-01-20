@@ -7,7 +7,6 @@ import Order from './Order';
 function Orders() {
     // eslint-disable-next-line no-unused-vars
     const [{basket, user} ,dispatch] = useStateValue();
-
     // eslint-disable-next-line no-unused-vars
     const [orders, setOrders] = useState([]); 
 
@@ -27,7 +26,6 @@ function Orders() {
         }else{
             setOrders([])
         }
-        
     }, [user]);
 
     return (  
